@@ -14,9 +14,8 @@ dependencies = [
 [dependency-groups]
 dev = [
   "pytest>=8.0",
-  "black>=24.3",
-  "flake8>=7.0",
   "pre-commit>=3.7",
+  "ruff>=0.4",
 ]
 
 [tool.uv]
@@ -26,6 +25,10 @@ environments = [
 ]
 cache-dir      = "./.uv_cache"
 default-groups = ["dev"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
 
 [[tool.uv.index]]
 name     = "pytorch"
